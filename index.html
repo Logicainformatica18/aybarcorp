@@ -253,21 +253,24 @@ h5 {
 
 <script>
     
-  document.addEventListener('DOMContentLoaded', function () {
-    const liteYoutube = document.querySelector('lite-youtube');
-    if (liteYoutube) {
+    document.addEventListener('DOMContentLoaded', function () {
+    const liteYoutubes = document.querySelectorAll('lite-youtube');
+    
+    liteYoutubes.forEach(liteYoutube => {
       const playButton = liteYoutube.shadowRoot.querySelector('#playButton');
+      
       if (playButton) {
-     //   playButton.style.visibility = 'hidden';
-        playButton.style.width = '5px';
-       playButton.style.height = '5px';
-      //  playButton.style.backgroundRepeat = 'no-repeat'; // Evita la repetición
+       // playButton.style.visibility = 'hidden'; 
+        playButton.style.width = '0px';
+        playButton.style.height = '0px';
+        playButton.style.backgroundRepeat = 'no-repeat';
       }
-    }
-  });
+    });
+});
+
 </script>
    <style>
-           
+    
 
       lite-youtube {
           /* No Shadow */
@@ -317,13 +320,13 @@ h5 {
 <center>
   <div class="row col-12">
  
-    <div class="col-4 col-sm-12 col-md-12 col-lg-6">
+    <div class="col-4 col-sm-12 col-md-12 col-lg-4">
       <lite-youtube videoid="68tbz0AyBUs" style="width: 100%;"
       class="rounded-1  border-2 mb-3" 
       ></lite-youtube>
     </div>
-    <div class="col-4 col-sm-12 col-md-12 col-lg-6"><lite-youtube videoid="68tbz0AyBUs" style="width: 100%;"></lite-youtube></div>
-    <div class="col-4 col-sm-12 col-md-12 col-lg-6"><lite-youtube videoid="68tbz0AyBUs" style="width: 100%;"></lite-youtube></div>
+    <div class="col-4 col-sm-12 col-md-12 col-lg-4"><lite-youtube  videoid="68tbz0AyBUs" style="width: 100%;"></lite-youtube></div>
+    <div class="col-4 col-sm-12 col-md-12 col-lg-4"><lite-youtube videoid="68tbz0AyBUs" style="width: 100%;"></lite-youtube></div>
 
 </div>
 </center>
